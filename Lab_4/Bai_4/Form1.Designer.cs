@@ -28,12 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            progressBar1 = new ProgressBar();
+            btnLoad = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(12, 374);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(776, 29);
+            progressBar1.TabIndex = 7;
+            // 
+            // btnLoad
+            // 
+            btnLoad.Location = new Point(12, 409);
+            btnLoad.Name = "btnLoad";
+            btnLoad.Size = new Size(94, 29);
+            btnLoad.TabIndex = 6;
+            btnLoad.Text = "Load";
+            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.Click += btnLoad_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(776, 356);
+            dataGridView1.TabIndex = 5;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(progressBar1);
+            Controls.Add(btnLoad);
+            Controls.Add(dataGridView1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private ProgressBar progressBar1;
+        private Button btnLoad;
+        private DataGridView dataGridView1;
     }
 }
